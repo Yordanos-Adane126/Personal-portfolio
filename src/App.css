@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #f7f9fc;
+}
+
+.App.dark {
+  background: #0f172a;
+  color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: white;
+  position: sticky;
+  top: 0;
+}
+
+.App.dark .navbar {
+  background: #1e293b;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.navbar li {
+  cursor: pointer;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.hire-btn {
+  background: #1e6dfb;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+}
+
+/* SECTION */
+.section {
+  padding: 100px 80px;
+}
+
+span {
+  color: #1e6dfb;
+}
+
+/* HOME */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home-text {
+  width: 55%;
+}
+
+.home-text h1 {
+  font-size: 40px;
+}
+
+.home-image {
+  width: 50%;
+}
+
+.home-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ABOUT */
+.about {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-image {
+  width: 50%;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.about-text {
+  width: 60%;
+}
+
+.about-text p {
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* SKILLS */
+.skills-container {
+  display: flex;
+  gap: 50px;
+}
+
+.skills-bars {
+  width: 50%;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress {
+  background: #ddd;
+  height: 10px;
+  border-radius: 10px;
+}
+
+.progress-bar {
+  height: 10px;
+  background: #1e6dfb;
+  border-radius: 10px;
+}
+
+.skills-icons {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.skills-icons div {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* CERTIFICATES */
+.cert-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.cert-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.cert-placeholder {
+  height: 150px;
+  background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #1e3a8a;
+  transition: 0.3s;
+}
+
+.cert-card:hover .cert-placeholder {
+  background: #1e6dfb;
+  color: white;
+  transform: scale(1.05);
+}
+
+.cert-type {
+  font-size: 12px;
+  color: gray;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* CONTACT */
+.contact-cards {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-cards a {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #1e6dfb;
+  color: white;
+}
+
+/* DARK FIX */
+.App.dark p,
+.App.dark h1,
+.App.dark h2,
+.App.dark h3,
+.App.dark a {
+  color: white;
+}
+
+.App.dark .skills-icons div,
+.App.dark .cert-card,
+.App.dark .contact-cards a,
+.App.dark .modal-content {
+  background: #1e293b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .home,
+  .about,
+  .skills-container,
+  .cert-grid,
+  .contact-cards {
+    flex-direction: column;
+  }
+
+  .home-text,
+  .home-image,
+  .about-image,
+  .about-text,
+  .skills-bars,
+  .skills-icons {
+    width: 100%;
+  }
+
+  .cert-card {
+    width: 100%;
+  }
+}
+
+.intro {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.App.dark .intro {
+  color: #ccc;
+}
